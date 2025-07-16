@@ -89,6 +89,7 @@
     const params = new URLSearchParams(window.location.search);
     const genre = params.get("genre");
     const country = params.get("country");
+    const hasFilters = (genre && genre.trim() !== "") || (country && country.trim() !== "");
 
     async function fetchFestivals() {
       const res = await fetch(`https://api.airtable.com/v0/${base}/${table}?pageSize=100`, {
@@ -99,25 +100,28 @@
 
       const data = await res.json();
       const records = data.records;
+      let filtered = records;
 
-      const filtered = records.filter(record => {
-        const f = record.fields;
+      if (hasFilters) {
+        filtered = records.filter(record => {
+          const f = record.fields;
 
-        const genreOK = !genre || (
+          const genreOK = !genre || (
             Array.isArray(f["Style de musique"])
               ? f["Style de musique"].map(g => g.toLowerCase()).includes(genre.toLowerCase())
               : (f["Style de musique"] || "").toLowerCase().includes(genre.toLowerCase())
           );
 
-        const countryOK = !country || (
+          const countryOK = !country || (
             Array.isArray(f["Nom du pays"])
               ? f["Nom du pays"].map(c => c.toLowerCase()).includes(country.toLowerCase())
               : (f["Nom du pays"] || "").toLowerCase().includes(country.toLowerCase())
           );
 
+          return genreOK && countryOK;
+        });
+      }
 
-        return genreOK && countryOK;
-      });
 
       const container = document.getElementById("resultats-container");
       container.innerHTML = "";
