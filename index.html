@@ -6,25 +6,8 @@
   <title>Groove Nomad</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<div class="container">
-    <header>
-      <div class="logo">GrooveNomad</div>
-      <nav>
-        <ul>
-          <li><a href="#">Événements</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="actions">
-        <select aria-label="Langue">
-          <option>FR</option>
-          <option>EN</option>
-        </select>
-        <button class="btn">Connexion</button>
-      </div>
 <!-- Chatbot Chatbase -->
-   
+    <!-- Bouton flottant pour ouvrir le chatbot -->
 <button id="chat-toggle" style="
   position: fixed;
   bottom: 20px;
@@ -40,6 +23,7 @@
   z-index: 9999;
 ">💬</button>
 
+<!-- Iframe Chatbot (caché au début) -->
 <iframe
   id="chatbot-iframe"
   src="https://www.chatbase.co/chatbot-iframe/CNB2bBgnuSIQ5jCGyBlvZ"
@@ -180,211 +164,36 @@
   </div>
   </div>
 
-
-  <!-- Rejoins la comu (style moderne, texte à gauche, grille photos à droite) -->
-  <section style="width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; background:#fff; border-radius:20px; display:flex; align-items:center; justify-content:center; padding:32px 24px; box-sizing:border-box; gap:24px; box-shadow:0 2px 16px rgba(160,32,240,0.04); max-width:none;">
-    <div style="flex:0 0 240px; min-width:180px; max-width:260px; display:flex; flex-direction:column; align-items:flex-start;">
-      <h1 style="font-size:2.2rem; color:#A020F0; font-weight:bold; margin-bottom:0;">REJOINS</h1>
-      <p style="font-size:1.7rem; color:#D16BA5; margin-top:0; margin-bottom:18px; letter-spacing:2px;">LA COMU</p>
-      <a href="https://www.instagram.com/lounes_912?igsh=MWJyZHo3MGplbjV5cA%3D%3D&utm_source=qr" target="_blank" style="display:inline-flex; align-items:center; background:linear-gradient(90deg,#833ab4,#fd1d1d,#fcb045); color:#fff; font-weight:bold; border:none; border-radius:16px; padding:8px 22px; font-size:1rem; text-decoration:none; box-shadow:0 2px 8px rgba(160,32,240,0.08); margin-top:8px;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:20px; height:20px; margin-right:8px;">
-        Nous rejoindre
-      </a>
-    </div>
-    <div style="flex:1 1 0; display:grid; grid-template-columns:160px 80px 80px; grid-template-rows:80px 80px 80px; gap:22px; min-width:340px; max-width:420px; align-items:center;">
-      <!-- Grande photo principale -->
-      <img src="photo1.png" alt="photo1" style="width:100%; height:100%; object-fit:cover; border-radius:14px; grid-column:1/2; grid-row:1/3; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-      <!-- 4 petites photos à droite -->
-      <img src="photo2.jpg" alt="photo2" style="width:100%; height:100%; object-fit:cover; border-radius:14px; grid-column:2/3; grid-row:1/2; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-      <img src="photo3.jpg" alt="photo3" style="width:100%; height:100%; object-fit:cover; border-radius:14px; grid-column:3/4; grid-row:1/2; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-      <img src="photo4.png" alt="photo4" style="width:100%; height:100%; object-fit:cover; border-radius:14px; grid-column:2/3; grid-row:2/3; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-      <img src="photo5.png" alt="photo5" style="width:100%; height:100%; object-fit:cover; border-radius:14px; grid-column:3/4; grid-row:2/3; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-      <!-- Une photo en bas à gauche -->
-      <img src="photo6.png" alt="photo6" style="width:100%; height:100%; object-fit:cover; border-radius:14px; grid-column:1/2; grid-row:3/4; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
-    </div>
-  </section>
-
-
   <!-- Types de musiques -->
   <h2>Les types de musiques</h2>
   <div class="type-scroll">
-     <a href="afroaccueil.html"
-       class="festival-type-card"
-       style="background-image: url('img/afro.webp');">
-      <span class="festival-type-label">Afro</span>
-    </a>
-
-   <a href="rockaccueil.html"
-       class="festival-type-card"
-       style="background-image: url('img/rock.jpg');">
-      <span class="festival-type-label">Rock</span>
-    </a>
-
-    <a href="houseaccueil.html"
-       class="festival-type-card"
-       style="background-image: url('img/house.jpg');">
-      <span class="festival-type-label">House</span>
-    </a>
-
-     <a href="jpopaccueil.html"
-       class="festival-type-card"
-       style="background-image: url('img/jpop.jpg');">
-      <span class="festival-type-label">Jpop</span>
-    </a>
-
-     <a href="rock.html"
-       class="festival-type-card"
-       style="background-image: url('img/electro.jpg');">
-      <span class="festival-type-label">EDM</span>
-    </a>
-   
-
-      <a href="popaccueil.html"
-       class="festival-type-card"
-       style="background-image: url('img/pop.jpg');">
-      <span class="festival-type-label">Pop</span>
-    </a>
-
-     <a href="latinoaccueil.html"
-       class="festival-type-card"
-       style="background-image: url('img/latino.jpg');">
-      <span class="festival-type-label">Latino</span>
-    </a>
-
-  <a href="jazzaccueil.html"
-       class="festival-type-card"
-       style="background-image: url('img/jazz.jpg');">
-      <span class="festival-type-label">Jazz</span>
-    </a>
-
-  <a href="Tranceaccueil.html"
-       class="festival-type-card"
-       style="background-image: url('img/trance.webp');">
-      <span class="festival-type-label">Trance</span>
-    </a>
-
+    <div class="festival-type-card" style="background-image: url('img/afro.webp');">Afro</div>
+    <div class="festival-type-card" style="background-image: url('img/rock.jpg');">Rock</div>
+    <div class="festival-type-card" style="background-image: url('img/house.jpg');">House</div>
+    <div class="festival-type-card" style="background-image: url('img/jpop.jpg');">Jpop</div>
+    <div class="festival-type-card" style="background-image: url('img/electro.jpg');">EDM</div>
+    <div class="festival-type-card" style="background-image: url('img/pop.jpg');">Pop</div>
+    <div class="festival-type-card" style="background-image: url('img/latino.jpg');">Latino</div>
+    <div class="festival-type-card" style="background-image: url('img/jazz.jpg');">Jazz</div>
+    <div class="festival-type-card" style="background-image: url('img/trance.webp');">Trance</div>
   </div>
 
   </div>
   </section>
-
-  <!--comment ça fonctionne-->
-
-  <section class="fonctionnement">
-    <link rel="stylesheet" href="style.css">
-    <h2>Comment on fonctionne ?</h2>
-
-    <div class="etapes">
-      <div class="etape">
-        <img src="uneenceinte.png" alt="vibrez">
-        <h3 class="titre vibrez">Vibrez</h3>
-        <p class="sous-titre">Choisissez votre vibe</p>
-        <p>
-          Explorez notre sélection de festivals aux quatre coins du monde : afro, techno, rock, pop, k-pop, jazz, salsa, oriental, et bien plus encore. Filtrez par destination, dates, style musical ou ambiance.
-        </p>
-      </div>
-
-      <div class="etape">
-        <img src="unavion.png" alt="Réservez">
-        <h3 class="titre reservez">Réservez</h3>
-        <p class="sous-titre">Composez votre formule</p>
-        <p>
-          Optez pour l’expérience qui vous ressemble : Place seule · Festival + Hôtel · Festival + Hôtel + Transport · Pack All-In : Festival + Hôtel + Transport + Activités
-        </p>
-      </div>
-
-      <div class="etape">
-        <img src="lesconfettis.png" alt="Partez">
-        <h3 class="titre partez">Partez !</h3>
-        <p class="sous-titre">Zero stress on gère</p>
-        <p>
-          Réglez en quelques clics, recevez vos confirmations et préparez-vous à vivre un moment inoubliable, sans stress logistique. On s’occupe de tout, vous n’avez qu’à danser.
-        </p>
-      </div>
-    </div>
-
-  </section>
-
-
-  <!-- Bouton pour ouvrir/fermer le chatbot -->
-  <button id="chatbot-toggle" style="position:fixed;bottom:30px;right:30px;z-index:9999;background:#1A082C;color:#fff;border:none;border-radius:30px;padding:16px 28px;font-size:1.1rem;box-shadow:0 2px 12px #222;cursor:pointer;">Chatbot</button>
-
-  <!-- Conteneur du chatbot caché -->
-  <div class="chatbot-container" id="chatbot-container" style="display:none;position:fixed;bottom:80px;right:30px;z-index:9998;">
-    <iframe
-      src="https://www.chatbase.co/chatbot-iframe/CNB2bBgnuSIQ5jCGyBlvZ"
-      title="Chatbot"
-      class="chatbot-iframe"
-      allow="microphone; camera"
-      loading="lazy"
-      style="width:350px;height:500px;border-radius:16px;border:none;box-shadow:0 2px 16px rgba(160,32,240,0.08);background:#fff;"
-    ></iframe>
-  </div>
-
-  <script>
-    // Chatbot toggle logic
-    const toggleBtn = document.getElementById('chatbot-toggle');
-    const chatbot = document.getElementById('chatbot-container');
-    toggleBtn.addEventListener('click', () => {
-      if (chatbot.style.display === 'none' || chatbot.style.display === '') {
-        chatbot.style.display = 'block';
-      } else {
-        chatbot.style.display = 'none';
-      }
-    });
-  </script>
-
-</body>
-</html>
-
-
-
 
 
   <!-- Avis clients -->
   <section class="testimonials">
-  <div class="card">
-    <img src="femmenoire.jpg" alt="Shana" class="avatar">
-    <h3>Shana Braun</h3>
-    <p class="age">22 ans</p>
-    <p class="review">
-      Je ne jure que par eux à présent, un CM et une équipe adorable au plus haut point qui répond à nos demandes...
-    </p>
-  </div>
-
-  <div class="card">
-    <img src="homme.jpg" alt="Wiltord" class="avatar">
-    <h3>Wiltord William</h3>
-    <p class="age">33 ans</p>
-    <p class="review">
-      Super équipe, avec eux j’ai déjà visité tellement d’endroits : Prague, Vienne, Londres…
-    </p>
-  </div>
-
-  <div class="card">
-    <img src="femmeblanche.jpg" alt="Nina" class="avatar">
-    <h3>Nina Belange</h3>
-    <p class="age">25 ans</p>
-    <p class="review">
-      Comment vous dire à quel point je les aime ? C’est devenu un réflexe pour moi et ma mère de leur faire confiance…
-    </p>
-  </div>
-</section>
-
-<!--newsletter-->
-<div class="newsletter-banner">
-  <div class="text-section textsection-1">
-    <h1 class="autoclass-1">MANQUE ZERO NEWS</h1>
-    <p class="autoclass-2">REJOINS LA NEWSLETTER</p>
-    <form class="newsletter-form newsletterform-1">
-      <input type="email" class="newsletter-input" placeholder="TON EMAIL" required />
-      <button type="submit" class="newsletter-btn">OK</button>
-    </form>
-  </div>
-  <div class="image-section imagesection-1"></div>
-</div>
-
-
+    <h2>Avis clients</h2>
+    <div class="testimonial">
+      <p>"Une organisation au top, merci Groove Nomad !"</p>
+      <span>- Sarah M.</span>
+    </div>
+    <div class="testimonial">
+      <p>"Tomorrowland avec eux ? Un rêve devenu réalité."</p>
+      <span>- Karim B.</span>
+    </div>
+  </section>
 
 
 <!-- FOOTER -->
@@ -397,7 +206,6 @@
     </div>
     <p>&copy; 2025 Groove Nomad — Tous droits réservés.</p>
   </div>
-
 </footer>
 <script>
   document.querySelectorAll('.fav-btn').forEach(btn => {

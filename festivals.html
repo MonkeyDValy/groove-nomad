@@ -8,34 +8,51 @@
 <body>
   <!-- Chatbot Chatbase -->
     <!-- Bouton flottant pour ouvrir le chatbot -->
+<button id="chat-toggle" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1f1f1f;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 9999;
+">💬</button>
 
-  <!-- Bouton pour ouvrir/fermer le chatbot -->
-  <button id="chatbot-toggle" style="position:fixed;bottom:30px;right:30px;z-index:9999;background:#1A082C;color:#fff;border:none;border-radius:30px;padding:16px 28px;font-size:1.1rem;box-shadow:0 2px 12px #222;cursor:pointer;">Chatbot</button>
+<!-- Iframe Chatbot (caché au début) -->
+<iframe
+  id="chatbot-iframe"
+  src="https://www.chatbase.co/chatbot-iframe/CNB2bBgnuSIQ5jCGyBlvZ"
+  width="350"
+  height="500"
+  style="
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    border: none;
+    border-radius: 12px;
+    z-index: 9998;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  "
+  allow="clipboard-write"
+></iframe>
+<script>
+  const chatbot = document.getElementById("chatbot-iframe");
+  const toggleBtn = document.getElementById("chat-toggle");
 
-  <!-- Conteneur du chatbot caché -->
-  <div class="chatbot-container" id="chatbot-container" style="display:none;position:fixed;bottom:80px;right:30px;z-index:9998;">
-    <iframe
-      src="https://www.chatbase.co/chatbot-iframe/CNB2bBgnuSIQ5jCGyBlvZ"
-      title="Chatbot"
-      class="chatbot-iframe"
-      allow="microphone; camera"
-      loading="lazy"
-      style="width:350px;height:500px;border-radius:16px;border:none;box-shadow:0 2px 16px rgba(160,32,240,0.08);background:#fff;"
-    ></iframe>
-  </div>
-
-  <script>
-    // Chatbot toggle logic
-    const toggleBtn = document.getElementById('chatbot-toggle');
-    const chatbot = document.getElementById('chatbot-container');
-    toggleBtn.addEventListener('click', () => {
-      if (chatbot.style.display === 'none' || chatbot.style.display === '') {
-        chatbot.style.display = 'block';
-      } else {
-        chatbot.style.display = 'none';
-      }
-    });
-  </script>
+  toggleBtn.addEventListener("click", () => {
+    if (chatbot.style.display === "none" || chatbot.style.display === "") {
+      chatbot.style.display = "block";
+    } else {
+      chatbot.style.display = "none";
+    }
+  });
+</script>
 
 <body>
       <!-- HEADER -->
@@ -142,21 +159,6 @@
     <p>&copy; 2025 Groove Nomad — Tous droits réservés.</p>
   </div>
   </footer>
-</footer>
-<!-- Chatbase Chatbot -->
-<div id="chatbot-container" style="display:flex; justify-content:center; margin-top:24px;">
-  <iframe
-    id="chatbot-frame"
-    src="https://www.chatbase.co/chatbot-iframe/CNB2bBgnuSIQ5jCGyBlvZ"
-    width="350"
-    height="500"
-    frameborder="0"
-    allow="microphone; autoplay"
-    title="Chatbot"
-    style="border-radius:16px; box-shadow:0 2px 16px rgba(160,32,240,0.08);">
-  </iframe>
-</div>
-<!-- /Chatbase Chatbot -->
   <script>
   document.querySelectorAll('.fav-btn').forEach(btn => {
     btn.addEventListener('click', () => {
